@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,10 +19,10 @@
                 <span>
                    
                 </span>
-                <input type="text" placeholder="Name" name="n">
-                <input type="email" placeholder="Email" name="e">
-                <input type="password" placeholder="Password" name="p">
-                <select name="op" id="">
+                <input type="text" placeholder="Name" name="username">
+                <input type="email" placeholder="Email" name="email">
+                <input type="password" placeholder="Password" name="pwd">
+                <select name="role" id="">
                     <option value="f">Farmer</option>
                     <option value="c">Consumer</option>
                 </select>
