@@ -68,7 +68,7 @@ body{
     height: 100%;
 }
 
-.container input{
+.container input,select,label{
     background-color: #eee;
     border: none;
     margin: 8px 0;
@@ -78,6 +78,7 @@ body{
     width: 100%;
     outline: none;
 }
+
 .form-container{
     position: absolute;
     top: 0;
