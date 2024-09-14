@@ -13,15 +13,15 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form  action="login.php" method="post">
+            <form  action="sign.php" method="post">
                 <h1>Create Account</h1>
                 <span>
                    
                 </span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <select name="" id="">
+                <input type="text" placeholder="Name" name="n">
+                <input type="email" placeholder="Email" name="e">
+                <input type="password" placeholder="Password" name="p">
+                <select name="op" id="">
                     <option value="f">Farmer</option>
                     <option value="c">Consumer</option>
                 </select>
