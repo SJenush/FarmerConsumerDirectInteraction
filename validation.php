@@ -1,5 +1,5 @@
 <?php
-// Database connection credentials
+//Database connection credentials
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -24,10 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Modify SQL to be case-insensitive for email
         $sql = "SELECT Email, Password FROM accounts WHERE LOWER(Email) = LOWER(?)";
 
-        // Prepare the SQL statement
         $stmt = $conn->prepare($sql);
 
-        // Check if the prepare() statement was successful
         if ($stmt === false) {
             die("Error preparing the statement: " . $conn->error);
         }
