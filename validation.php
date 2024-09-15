@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // First, validate the email format
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Modify SQL to be case-insensitive for email
-        $sql = "SELECT Email, Password FROM accounts WHERE LOWER(email) = LOWER(?)";
+        $sql = "SELECT Email, Password FROM accounts WHERE LOWER(Email) = LOWER(?)";
 
         // Prepare the SQL statement
         $stmt = $conn->prepare($sql);
@@ -39,12 +39,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
         $result = $stmt->get_result();
 
+        // Debugging: Check how many rows are returned
+       
+
         // Check if any result is returned
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
 
-            // Verify the password (assuming password is hashed)
-            if (password_verify($password, $row['Password'])) {
+            // Debugging: Output values fetched from the database
+         
+
+            // Simplified Password Comparison
+            if ($row['Password'] === $password) {
                 echo "<p style='color:green;'>Login successful. Welcome!</p>";
             } else {
                 echo "<p style='color:red;'>Invalid password. Please try again.</p>";
