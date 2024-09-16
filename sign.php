@@ -5,8 +5,6 @@ $email = $_POST["email"];
 $password = $_POST["pwd"];
 $role = $_POST["role"];
 
-
-
 // Establish a connection to the database
 $con = mysqli_connect("localhost", "root", "", "dbfarmerconsumer");
 
@@ -15,8 +13,9 @@ if (!$con) {
     die("Connection failed: " . mysqli_connect_error());
 }
 //echo "Connection success";
+$hashed_pwd=password_hash($password,PASSWORD_DEFAULT);
 // Prepare the SQL query
-$sql = "INSERT INTO accounts (Username, Email, Password, Role) VALUES ('$username', '$email', '$password', '$role')";
+$sql = "INSERT INTO accounts (Username, Email, Password, Role) VALUES ('$username', '$email', '$hashed_pwd', '$role')";
 
 // Execute the query
 if (mysqli_query($con, $sql)) {

@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          
 
             // Simplified Password Comparison
-            if ($row['Password'] === $password) {
+            if (password_verify($password,$row['Password'])) {
                 header("Location:information.html");
             } else {
                 header("Location: login.php?error=Invalid password. Please try again.");

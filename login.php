@@ -34,17 +34,16 @@
             <form action="validation.php" method="post" >
                 <h1>LOGIN</h1>
                 <span>
-                   
-                </span>
-                <input type="email" placeholder="Email" name="email">
-                <input type="password" placeholder="Password" name="pwd" >
-                <a href="#">Forgot Your Password</a>
-                <button>Login</button>
                 <?php
                     if (isset($_GET['error'])) {
                         echo "<p style='color:red;'>" . htmlspecialchars($_GET['error']) . "</p>";
                     }
                 ?>
+                </span>
+                <input type="email" placeholder="Email" name="email">
+                <input type="password" placeholder="Password" name="pwd" >
+                <a href="#">Forgot Your Password</a>
+                <button>Login</button>
             </form>
         </div>
 
