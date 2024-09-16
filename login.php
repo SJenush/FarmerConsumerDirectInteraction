@@ -19,9 +19,9 @@
                 <span>
                    
                 </span>
-                <input type="text" placeholder="Name" name="username">
-                <input type="email" placeholder="Email" name="email">
-                <input type="password" placeholder="Password" name="pwd">
+                <input type="text" placeholder="Name" name="username" required>
+                <input type="email" placeholder="Email" name="email" required pattern="[a-bA-B0-9#$%^&*()]+@[A-Za-z]+\.[a-zA-Z]{2,3}">
+                <input type="password" placeholder="Password" name="pwd" required >
                 <select name="role" id="">
                     <option value="f">Farmer</option>
                     <option value="c">Consumer</option>
@@ -36,7 +36,7 @@
                 <span>
                 <?php
                     if (isset($_GET['error'])) {
-                        echo "<p style='color:red;'>" . htmlspecialchars($_GET['error']) . "</p>";
+                        echo "<p style='color:green;'>" . htmlspecialchars($_GET['error']) . "</p>";
                     }
                 ?>
                 </span>
