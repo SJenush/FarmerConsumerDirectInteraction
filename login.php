@@ -20,7 +20,7 @@
                    
                 </span>
                 <input type="text" placeholder="Name" name="username" required>
-                <input type="email" placeholder="Email" name="email" required pattern="[a-bA-B0-9#$%^&*()]+@[A-Za-z]+\.[a-zA-Z]{2,3}">
+                <input type="email" placeholder="Email" name="email" required>
                 <input type="password" placeholder="Password" name="pwd" required >
                 <select name="role" id="">
                     <option value="f">Farmer</option>
