@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Simplified Password Comparison
             if ($row['Password'] === $password) {
-                echo "<p style='color:green;'>Login successful. Welcome!</p>";
+                header("Location:information.php");
             } else {
                 echo "<p style='color:red;'>Invalid password. Please try again.</p>";
             }
