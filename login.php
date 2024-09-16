@@ -40,6 +40,11 @@
                 <input type="password" placeholder="Password" name="pwd" >
                 <a href="#">Forgot Your Password</a>
                 <button>Login</button>
+                <?php
+                    if (isset($_GET['error'])) {
+                        echo "<p style='color:red;'>" . htmlspecialchars($_GET['error']) . "</p>";
+                    }
+                ?>
             </form>
         </div>
 

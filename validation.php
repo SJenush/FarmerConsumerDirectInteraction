@@ -12,7 +12,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+$error="";
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the email and password entered by the user
@@ -51,16 +51,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($row['Password'] === $password) {
                 header("Location:information.html");
             } else {
-                echo "<p style='color:red;'>Invalid password. Please try again.</p>";
+                header("Location: login.php?error=Invalid password. Please try again.");
+                exit;
             }
         } else {
-            echo "<p style='color:red;'>The email address '$email' is not found in the system.</p>";
+            header("Location: login.php?error=Email not found.");
+            exit;
         }
 
         // Close the statement
         $stmt->close();
     } else {
-        echo "<p style='color:red;'>The email address '$email' is not in a valid format.</p>";
+        header("Location: login.php?error=Invalid email format.");
+        exit;
     }
 }
 
