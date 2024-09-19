@@ -14,7 +14,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form  action="sign.php" method="post">
+            <form  action="register_process.php" method="post">
                 <h1>Create Account</h1>
                 <span>
                    
@@ -31,7 +31,7 @@
         </div>
 
         <div class="form-container sign-in">
-            <form action="validation.php" method="post" >
+            <form action="login_process.php" method="post" >
                 <h1>LOGIN</h1>
                 <span>
                 <?php

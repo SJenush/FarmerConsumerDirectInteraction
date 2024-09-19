@@ -19,7 +19,11 @@ $sql = "INSERT INTO accounts (Username, Email, Password, Role) VALUES ('$usernam
 
 // Execute the query
 if (mysqli_query($con, $sql)) {
-    echo "Thanks for the registration !!!";
+    if($role=='f'){
+        header("Location:AddProducts.php");
+    }else{
+        header("Location:ViewProducts.php");
+    }
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($con);
 }

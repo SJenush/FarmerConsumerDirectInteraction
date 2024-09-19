@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // First, validate the email format
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Modify SQL to be case-insensitive for email
-        $sql = "SELECT Email, Password FROM accounts WHERE LOWER(Email) = LOWER(?)";
+        $sql = "SELECT * FROM accounts WHERE LOWER(Email) = LOWER(?)";
 
         $stmt = $conn->prepare($sql);
 
@@ -49,7 +49,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Simplified Password Comparison
             if (password_verify($password,$row['Password'])) {
-                header("Location:information.html");
+                
+                if($row['Role']=='f'){
+                header("Location:AddProducts.php");
+                }else{
+                    header("Location:ViewProducts.php");
+                }
             } else {
                 header("Location: login.php?error=Invalid password. Please try again.");
                 exit;
