@@ -19,6 +19,10 @@ $sql = "INSERT INTO accounts (Username, Email, Password, Role) VALUES ('$usernam
 
 // Execute the query
 if (mysqli_query($con, $sql)) {
+    session_start();
+        $_SESSION['Username']=$username;
+        $_SESSION['Email']=$email;
+        $_SESSION['Role']=$role;
     if($role=='f'){
         header("Location:AddProducts.php");
     }else{

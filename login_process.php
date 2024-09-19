@@ -49,10 +49,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Simplified Password Comparison
             if (password_verify($password,$row['Password'])) {
-                
+                session_start();
+                $_SESSION['Username']=$row['Username'];
+                $_SESSION['Email']=$row['Email'];
+                $_SESSION['Role']=$row['Role'];
                 if($row['Role']=='f'){
                 header("Location:AddProducts.php");
                 }else{
+                   // echo $_SESSION['Username'];
                     header("Location:ViewProducts.php");
                 }
             } else {
