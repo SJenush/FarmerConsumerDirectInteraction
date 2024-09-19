@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/login_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>LOGIN-PAGE</title>
 </head>
 
@@ -21,12 +22,12 @@
         <div class="form-container sign-up">
             <form  action="register_process.php" method="post">
                 <h1>Create Account</h1>
-                <span>
-                   
+                <span class="err">
+
                 </span>
-                <input type="text" placeholder="Name" name="username" required>
-                <input type="email" placeholder="Email" name="email" required>
-                <input type="password" placeholder="Password" name="pwd" required >
+                <input type="text" placeholder="Name" name="username" id="reg_name" required><span id="err_name" class="err"></span>
+                <input type="email" placeholder="Email" name="email" required id="reg_email"><span id="err_email" class="err"></span>
+                <input type="password" placeholder="Password" name="pwd" required id="reg_pwd"><span id="err_pwd" class="err"></span>
                 <select name="role" id="">
                     <option value="f">Farmer</option>
                     <option value="c">Consumer</option>
@@ -38,15 +39,15 @@
         <div class="form-container sign-in">
             <form action="login_process.php" method="post" >
                 <h1>LOGIN</h1>
-                <span>
+                <span class="err" id="log_msg">
                 <?php
                     if (isset($_GET['error'])) {
-                        echo "<p style='color:green;'>" . htmlspecialchars($_GET['error']) . "</p>";
+                        echo "<p style='color:red;'>" . htmlspecialchars($_GET['error']) . "</p>";
                     }
                 ?>
                 </span>
-                <input type="email" placeholder="Email" name="email">
-                <input type="password" placeholder="Password" name="pwd" >
+                <input type="email" placeholder="Email" name="email" id="log_email">
+                <input type="password" placeholder="Password" name="pwd" id="log_pwd">
                 <a href="#">Forgot Your Password</a>
                 <button>Login</button>
             </form>
@@ -67,6 +68,7 @@
             </div>
         </div>
     </div>
+    <script src="static/js/login_val.js"></script>
     <script src="static/js/login.js"></script>
 </body>
 

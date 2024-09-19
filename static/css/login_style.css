@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    list-style: none;
 }
 body{
     background-color: #021024;
@@ -78,7 +79,12 @@ body{
     width: 100%;
     outline: none;
 }
-
+.err{
+    color: red;
+    font-size: 12.5px !important;
+    padding: 5px;
+    text-align: left !important;
+}
 .form-container{
     position: absolute;
     top: 0;
