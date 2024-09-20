@@ -29,10 +29,14 @@
     </div>
   </div>
 </nav>
-<div>
-
+<div class="contain">
+<center>
+       <img src="/static/img/farmer.png" class="ico"> 
+       <h2>Farmer Name</h2></center>
+<div class="flex-container">
+  <div>
     <form class="form">
-       <center> <h2>Farmer Name</h2></center>
+       
         <h3 class="na">Add Product:</h3>
         <table>
             <tr class="rw">
@@ -42,7 +46,7 @@
                 <td>Avaliable quantity:</td><td><input type="number"class="form-control"></td>
             </tr>
             <tr class="rw">
-                <td>Quantity unit:</td><td><input type="radio"class="form-check-input" value="kg" name="unit"><label for="" class="form-check-label lab">in kg</label>
+                <td>Quantity unit:</td><td><input type="radio"class="form-check-input" value="kg" name="unit" checked><label for="" class="form-check-label lab">in kg</label>
                 <input type="radio"class="form-check-input" value="count" name="unit"><label class="form-check-label lab">count</label></td>
             </tr>
             <tr class="rw">
@@ -61,7 +65,12 @@
 
     </form>
 
+  </div>
+  <div class="img_box">
+    <img src="/static/img/veg.png" alt="" srcset="" class="img_cu">
+  </div>
 </div>
 
+</div>
 </body>
 </html>

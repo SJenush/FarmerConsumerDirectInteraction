@@ -1,7 +1,9 @@
 
 .cu_nav{
-    background: rgb(51, 164, 45)!important;
+   background-color: rgb(37, 148, 31) !important;
     color: white;
+    position: sticky;
+    top: 0;
 }
 .cu_Ti{
     font-size: 40px !important;
@@ -20,6 +22,20 @@
     padding: 10px;
     padding-top: 0px;
 }
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+}
+.contain{
+    margin: 20px;
+}
+.img_box{
+    margin-top:70px;
+    margin-left: 50px;
+}
+.img_cu{
+    border-radius: 5%;
+}
 .poppins-medium {
         font-family: "Poppins", sans-serif;
         font-weight: 500;
@@ -27,6 +43,10 @@
       }
 .na{
     margin-right: 300px;
+}
+.ico{
+    width: 120px;
+    height: 120px;
 }
 form{
     padding: 60px;
