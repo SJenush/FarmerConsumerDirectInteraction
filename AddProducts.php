@@ -1,5 +1,14 @@
 <?php
 session_start();
+if(isset($_SESSION['Username'])){
+$user=$_SESSION['Username'];
+if($_SESSION['Role']=='c'){
+  echo"<script> alert('Access denied');</script>";
+  header("Location:index.php");
+}
+}else{
+  header("Location:login.php");
+}
 $msg="";
 if($_SERVER["REQUEST_METHOD"]=="POST"){
   $prod_name=$_POST['prod_name'];
@@ -81,7 +90,7 @@ mysqli_close($con);
         <a class="nav-link c_top" href="#">View product</a></div>
         <div class="div_ico">
           <img src="/static/img/logout.png" class="img_ico">
-        <a class="nav-link  c_top" aria-disabled="true">Logout</a></div>
+        <a class="nav-link  c_top" href="logout.php">Logout</a></div>
       </div>
     </div>
   </div>
@@ -90,7 +99,7 @@ mysqli_close($con);
 <center>
       <h2 class="msg"><?php echo $msg?></h2>
        <img src="/static/img/tea (1).png" class="ico"> 
-       <h2 class="f_name">Farmer Name</h2></center>
+       <h2 class="f_name">Hi<?php echo " ".$_SESSION['Username'];?></h2></center>
 <div class="flex-container">
   <div>
     <form class="form" action="" method="POST" enctype="multipart/form-data">
@@ -130,5 +139,10 @@ mysqli_close($con);
 </div>
 
 </div>
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
 </body>
 </html>
