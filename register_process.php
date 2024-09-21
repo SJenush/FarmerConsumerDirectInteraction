@@ -14,6 +14,11 @@ if (!$con) {
 }
 //echo "Connection success";
 $hashed_pwd=password_hash($password,PASSWORD_DEFAULT);
+
+$query="SELECT Username FROM `accounts` WHERE Email=\"$email\";";
+$res=mysqli_query($con,$query);
+if($res&&mysqli_num_rows($res)==0){
+
 // Prepare the SQL query
 $sql = "INSERT INTO accounts (Username, Email, Password, Role) VALUES ('$username', '$email', '$hashed_pwd', '$role')";
 
@@ -28,10 +33,12 @@ if (mysqli_query($con, $sql)) {
     }else{
         header("Location:ViewProducts.php");
     }
-} else {
+    } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($con);
+    }
+}else{
+    echo "<script>alert('This email has been already registered!');window.location.href='login.php';</script>";
 }
-
 //include("login.php");
 // Close the database connection
 mysqli_close($con);
