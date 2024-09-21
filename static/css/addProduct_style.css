@@ -1,18 +1,20 @@
 
 .cu_nav{
-   background-color: rgb(37, 148, 31) !important;
+   background-color: rgb(25, 133, 19) !important;
     color: white;
     position: sticky;
     top: 0;
 }
 .cu_Ti{
     font-size: 40px !important;
+    padding: 10px;
 }
 .cu_white{
     color:white;
 }
 .c_ter{
     margin-left: 400px;
+    
 }
 .butn{
     background-color:  rgb(37, 148, 31)!important;
@@ -55,3 +57,14 @@ form{
 td{
     padding: 10px;
 }
+.c_top{
+    font-size: large;
+    margin-left: 10px;
+    color: aliceblue;
+}
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

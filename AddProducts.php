@@ -9,22 +9,31 @@
     <link rel="stylesheet" href="static/css/addProduct_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary cu_nav">
   <div class="container-fluid">
-    <a class="navbar-brand cu_white cu_Ti poppins-medium " href="#">Navbar</a>
+    <a class="navbar-brand cu_white cu_Ti anton-regular  " href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav c_ter">
-        <a class="nav-link active" aria-current="page" href="#" >Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+        <a class="nav-link  c_top" aria-current="page" href="#" >Home</a>
+        <a class="nav-link c_top" href="#">Add product</a>
+        <a class="nav-link c_top" href="#">View product</a>
+        <a class="nav-link  c_top" aria-disabled="true">Logout</a>
       </div>
     </div>
   </div>
