@@ -6,7 +6,9 @@
     background-color: rgb(25, 133, 19) !important;
      color: white;
      position: sticky;
+     width: 100%;
      top: 0;
+     z-index: 10 !important;
  }
 
  .div_ico{
@@ -24,6 +26,10 @@
     font-size: large;
     color: aliceblue;
 }
+.c_add{
+    height: 25px !important;
+ 
+ } 
 .cu_Ti{
     font-size: 40px !important;
     padding: 10px;

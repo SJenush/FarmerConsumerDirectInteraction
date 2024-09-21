@@ -1,9 +1,16 @@
 .msg{
     color:rgb(37, 148, 31) ;
 }
+
 .in_col:focus{
     border-color: rgb(37, 148, 31);
     box-shadow: 0 0 0 .25rem rgba(93, 220, 20, 0.677);
+    background: transparent;
+}
+.in_col{
+    background: transparent;
+    border: 1px solid darkgreen;
+    outline: none;
 }
 .in_rad:checked{
     background-color: rgb(37, 148, 31);
@@ -12,11 +19,6 @@
 .f_name{
     color: darkgreen;
 }
-.c_add{
-   height: 25px;
-
-}
-
 .butn{
     background-color:  rgb(37, 148, 31)!important;
     float: right;
@@ -50,10 +52,11 @@
 .ico{
     width: 120px;
     height: 120px;
+    box-shadow: 0.3 0.2 0.5 rgb(37, 148, 31);
 }
 form{
     padding: 60px;
-    background-image: url();
+ 
     
 }
 td{

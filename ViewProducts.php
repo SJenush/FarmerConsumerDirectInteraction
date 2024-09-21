@@ -13,7 +13,6 @@
 
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary cu_nav">
   <div class="container-fluid">
     <div>
@@ -45,24 +44,54 @@
 </nav>
 <div class="container">
 <div class="card-group">
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+  
+  <div class="card cu_card">
+    <img src="/static/img/veg.png" class="card-img-top cu_img" alt="...">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
     </div>
   </div>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+  <div class="card cu_card">
+    <img src="static/img/orange.jpg" class="card-img-top cu_img" alt="...">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
       <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
     </div>
   </div>
+  <div class="card cu_card">
+    <img src="static/img/fruit.jpg" class="card-img-top cu_img" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title:10</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text">Farmer Name:Ravi</p>
+      <p class="card-text">Available Quantity:5kg</p>
+      <button class="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+  
+</div>
+<div class="card-group cu_card">
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="/static/img/veg.png" class="card-img-top cu_img" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card cu_card">
+    <img src="static/img/orange.jpg" class="card-img-top cu_img" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card cu_card">
+    <img src="static/img/fruit.jpg" class="card-img-top cu_img" alt="...">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
