@@ -59,18 +59,29 @@ mysqli_close($con);
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary cu_nav">
   <div class="container-fluid">
-    <a class="navbar-brand cu_white cu_Ti anton-regular  " href="#">Navbar</a>
+    <div>
+      <img src="static/img/leaves.png" alt="" class="main_icon">
+    <a class="navbar-brand cu_white cu_Ti anton-regular  " href="#">GreenHarvest </a>
+  </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav c_ter">
       <script src="https://cdn.lordicon.com/lordicon.js"></script>
-
+      <div class="div_ico">
+        <img src="/static/img/home.png" class="img_ico">
         <a class="nav-link  c_top" aria-current="page" href="#" >Home</a>
-        <a class="nav-link c_top" href="#">Add product</a>
-        <a class="nav-link c_top" href="#">View product</a>
-        <a class="nav-link  c_top" aria-disabled="true">Logout</a>
+      </div>
+      <div class="div_ico">
+        <img src="/static/img/add-product.png" class="img_ico c_add">
+        <a class="nav-link c_top" href="#">Add product</a></div>
+        <div class="div_ico">
+          <img src="/static/img/search (1).png" class="img_ico">
+        <a class="nav-link c_top" href="#">View product</a></div>
+        <div class="div_ico">
+          <img src="/static/img/logout.png" class="img_ico">
+        <a class="nav-link  c_top" aria-disabled="true">Logout</a></div>
       </div>
     </div>
   </div>
@@ -78,30 +89,30 @@ mysqli_close($con);
 <div class="contain">
 <center>
       <h2 class="msg"><?php echo $msg?></h2>
-       <img src="/static/img/farmer.png" class="ico"> 
-       <h2>Farmer Name</h2></center>
+       <img src="/static/img/tea (1).png" class="ico"> 
+       <h2 class="f_name">Farmer Name</h2></center>
 <div class="flex-container">
   <div>
     <form class="form" action="" method="POST" enctype="multipart/form-data">
        
-        <h3 class="na">Add Product:</h3>
+        <h3 class="na f_name">Add Product:</h3>
         <table>
             <tr class="rw">
-                <td>Product Name:</td><td><input type="text" class="form-control" name="prod_name"></td>
+                <td>Product Name:</td><td><input type="text" class="form-control in_col" name="prod_name"></td>
             </tr>
             <tr class="rw">
-                <td>Avaliable quantity:</td><td><input type="number"class="form-control" name="prod_quantity"></td>
+                <td>Avaliable quantity:</td><td><input type="number"class="form-control in_col" name="prod_quantity"></td>
             </tr>
             <tr class="rw">
-                <td>Quantity unit:</td><td><input type="radio"class="form-check-input" value="kg" name="unit" checked><label for="" class="form-check-label lab">in kg</label>
-                <input type="radio"class="form-check-input" value="count" name="unit"><label class="form-check-label lab">count</label></td>
+                <td>Quantity unit:</td><td><input type="radio"class="form-check-input in_rad" value="kg" name="unit" checked><label for="" class="form-check-label lab">in kg</label>
+                <input type="radio"class="form-check-input in_rad" value="count" name="unit"><label class="form-check-label lab">count</label></td>
             </tr>
             <tr class="rw">
-                <td>Description:</td><td><textarea type="text"class="form-control" name="prod_des"></textarea></td>
+                <td>Description:</td><td><textarea type="text"class="form-control in_col" name="prod_des"></textarea></td>
             </tr>
             <tr class="rw">
-                <td>Add To Image:</td>
-                <td><input type="file" class="form-control" name="prod_img"></td>
+                <td>Add Image:</td>
+                <td><input type="file" class="form-control in_col" name="prod_img"></td>
                 
             </tr>
             <tr class="rw">
