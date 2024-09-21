@@ -103,6 +103,7 @@ mysqli_close($con);
 <div class="flex-container">
   <div>
     <form class="form" action="" method="POST" enctype="multipart/form-data">
+    
        
         <h3 class="na f_name">Add Product:</h3>
         <table>
