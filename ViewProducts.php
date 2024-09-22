@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary cu_nav">
+<nav class="navbar navbar-expand-lg bg-body-tertiary cu_nav">
   <div class="container-fluid">
     <div>
       <img src="static/img/leaves.png" alt="" class="main_icon">
@@ -43,36 +43,42 @@
   </div>
 </nav>
 <div class="container">
-<div class="card-group">
-  
+  <?php 
+  $con=mysqli_connect("localhost","root","","dbfarmerconsumer");
+  if(!$con)
+  {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+  $sql="SELECT * FROM products";
+  $result=mysqli_query($con,$sql);
+  if($result&&mysqli_num_rows($result)>0){
+      
+  }else{
+      echo "No products found";
+  }
+  mysqli_close($con);
+  $x=0;
+  foreach($result as $row):?>
+    <?php if($x%4==0):?>
+      <div class="card-group">
+      <?php endif;?>
   <div class="card cu_card">
-    <img src="/static/img/veg.png" class="card-img-top cu_img" alt="...">
+    <img src="<?php echo $row['ProductImgPath']?>" class="card-img-top cu_img" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card cu_card">
-    <img src="static/img/orange.jpg" class="card-img-top cu_img" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card cu_card">
-    <img src="static/img/fruit.jpg" class="card-img-top cu_img" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title:10</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text">Farmer Name:Ravi</p>
-      <p class="card-text">Available Quantity:5kg</p>
+      <h5 class="card-title"><?php echo $row['ProductName'];?></h5>
+      <p class="card-text"><?php echo $row['ProductDescription'];?></p>
+      <p class="card-text">Farmer Name: <?php echo $row['FarmerName'];?></p>
+      <p class="card-text">Available Quantity:<?php echo $row['ProductQuantity']; if($row['isCount']){echo " count";}else{echo " kg";}?></p>
       <button class="btn btn-primary">Buy Now</button>
     </div>
   </div>
+  <?php if($x%4==3):?>
+    </div>
+      <?php endif;?>
+    <?php $x++;?>
+  <?php endforeach;?>
   
-</div>
+
 <div class="card-group cu_card">
   <div class="card">
     <img src="/static/img/veg.png" class="card-img-top cu_img" alt="...">
