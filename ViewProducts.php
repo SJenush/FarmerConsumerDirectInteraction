@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="static/css/viewProduct_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -62,15 +63,17 @@
     <?php if($x%4==0):?>
       <div class="card-group">
       <?php endif;?>
+  <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
   <div class="card cu_card">
     <img src="<?php echo $row['ProductImgPath']?>" class="card-img-top cu_img" alt="...">
     <div class="card-body">
-      <h5 class="card-title"><?php echo $row['ProductName'];?></h5>
-      <p class="card-text"><?php echo $row['ProductDescription'];?></p>
-      <p class="card-text">Farmer Name: <?php echo $row['FarmerName'];?></p>
-      <p class="card-text">Available Quantity:<?php echo $row['ProductQuantity']; if($row['isCount']){echo " count";}else{echo " kg";}?></p>
-      <button class="btn btn-primary">Buy Now</button>
+      <h5 class="card-title paytone-one-regular"><?php echo $row['ProductName'];?></h5>
+      <p class="card-text poppins-medium"><?php echo $row['ProductDescription'];?></p>
+      <p class="card-text poppins-medium">Farmer Name: <?php echo $row['FarmerName'];?></p>
+      <p class="card-text poppins-medium">Available Quantity:<?php echo $row['ProductQuantity']; if($row['isCount']){echo " count";}else{echo " kg";}?></p>
+      <button class="btn btn-primary poppins-medium">Buy Now</button>
     </div>
+  </div>
   </div>
   <?php if($x%4==3):?>
     </div>
@@ -79,8 +82,9 @@
   <?php endforeach;?>
   
 
-<div class="card-group cu_card">
-  <div class="card">
+<div class="card-group">
+  <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+  <div class="card cu_card">
     <img src="/static/img/veg.png" class="card-img-top cu_img" alt="...">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
@@ -88,14 +92,8 @@
       <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
     </div>
   </div>
-  <div class="card cu_card">
-    <img src="static/img/orange.jpg" class="card-img-top cu_img" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
+</div>
+
   <div class="card cu_card">
     <img src="static/img/fruit.jpg" class="card-img-top cu_img" alt="...">
     <div class="card-body">
