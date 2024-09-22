@@ -75,14 +75,14 @@ mysqli_close($con);
       <script src="https://cdn.lordicon.com/lordicon.js"></script>
       <div class="div_ico">
         <img src="/static/img/home.png" class="img_ico">
-        <a class="nav-link  c_top" aria-current="page" href="#" >Home</a>
+        <a class="nav-link  c_top" aria-current="page" href="index.php" >Home</a>
       </div>
       <div class="div_ico">
         <img src="/static/img/add-product.png" class="img_ico c_add">
-        <a class="nav-link c_top" href="#">Add product</a></div>
+        <a class="nav-link c_top" href="AddProducts.php">Add product</a></div>
         <div class="div_ico">
           <img src="/static/img/search (1).png" class="img_ico">
-        <a class="nav-link c_top" href="#">View product</a></div>
+        <a class="nav-link c_top" href="ViewProducts.php">View product</a></div>
         <div class="div_ico">
           <img src="/static/img/logout.png" class="img_ico">
         <a class="nav-link  c_top" href="logout.php">Logout</a></div>
