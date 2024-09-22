@@ -20,8 +20,9 @@
     color: darkgreen;
 }
 .butn{
-    background-color:  rgb(37, 148, 31)!important;
+    background-color:  #006400 !important;
     float: right;
+    border: #006400;
 }
 .lab{
     padding: 10px;

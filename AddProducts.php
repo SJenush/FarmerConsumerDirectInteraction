@@ -19,6 +19,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
   if($unit=="kg"){
     $isCount=FALSE;
   }
+  $prod_cost=$_POST['prod_cost'];
   $farmer_name=$_SESSION['Username'];
   $img_name=$_FILES['prod_img']['name'];
   $img_tmp=$_FILES['prod_img']['tmp_name'];
@@ -32,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     die("Error while connection".mysqli_connect_error());
   }
   if(move_uploaded_file($img_tmp,$img_path)){
-  $sql="INSERT INTO products (ProductName	,ProductDescription,ProductQuantity,isCount,ProductImgPath,FarmerName) VALUES('$prod_name','$prod_des','$prod_quantity','$isCount','$img_path','$farmer_name')";
+  $sql="INSERT INTO products (ProductName	,ProductDescription,ProductQuantity,isCount,ProductCost,ProductImgPath,FarmerName) VALUES('$prod_name','$prod_des','$prod_quantity','$isCount','$prod_cost','$img_path','$farmer_name')";
   if(mysqli_query($con,$sql)){
     $msg= "Product Successfully added";
   }else {
@@ -49,11 +50,12 @@ mysqli_close($con);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Products</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="static/css/nav.css">  
     <link rel="stylesheet" href="static/css/addProduct_style.css">  
+    <link rel="icon" href="/static/img/mainicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
@@ -111,6 +113,9 @@ mysqli_close($con);
             <tr class="rw">
                 <td>Quantity unit:</td><td><input type="radio"class="form-check-input in_rad" value="kg" name="unit" checked><label for="" class="form-check-label lab">in kg</label>
                 <input type="radio"class="form-check-input in_rad" value="count" name="unit"><label class="form-check-label lab">count</label></td>
+            </tr>
+            <tr class="rw">
+                <td>Price (per kg/count):</td><td><input type="number"class="form-control in_col" name="prod_cost"></td>
             </tr>
             <tr class="rw">
                 <td>Description:</td><td><textarea type="text"class="form-control in_col" name="prod_des"></textarea></td>

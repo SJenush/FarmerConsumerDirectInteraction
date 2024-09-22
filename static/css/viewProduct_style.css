@@ -2,18 +2,48 @@
     margin: 15px !important;
 }
 .cu_img{
-    height: 300px;
+    height: 250px;
     width: 100%;
 }
 .cu_card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+  .search{
+    padding: 10px;
+  }
   .cu_card:hover {
     transform: scale(1.05); /* Slightly enlarges the card */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
   }
-
+  .btn-darkgreen {
+    background-color: #006400; /* Dark green background */
+    color: white;              /* White text */
+    border: none;
+  }
+  
+  .btn-darkgreen:hover {
+    background-color: #004d00;
+    color: white; /* Slightly darker green on hover */
+  }
+  .search_bar{
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .search_in:focus{
+    border-color: rgb(37, 148, 31);
+    box-shadow: none;
+    background: transparent;
+  }
+  .category{
+    display: flex;
+    justify-content: space-around;
+  }
+  .p_cost{
+    float:right;
+    color:rgb(190, 51, 51);
+    top:0;
+    font-size: larger;
+  }
 .paytone-one-regular{
     font-family: "Paytone One", sans-serif;
     font-weight: 400;
