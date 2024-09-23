@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['Username'])){
+    $user=$_SESSION['Username'];
+}else{
+    header("Location:login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +15,7 @@
     <title>View Products</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="static/css/nav.css">
     <link rel="stylesheet" href="static/css/viewProduct_style.css">
     <link rel="icon" href="/static/img/mainicon.png">
@@ -37,7 +47,7 @@
         <a class="nav-link c_top" href="AddProducts.php">Add product</a></div>
         <div class="div_ico">
           <img src="/static/img/search.png" class="img_ico">
-        <a class="nav-link c_top" href="#">View product</a></div>
+        <a class="nav-link c_top" href="ViewProducts.php">View product</a></div>
         <div class="div_ico">
           <img src="/static/img/logout.png" class="img_ico">
         <a class="nav-link  c_top" href="logout.php">Logout</a></div>
@@ -79,14 +89,14 @@
       <?php endif;?>
   <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
   <div class="card cu_card">
-    <img src="<?php echo $row['ProductImgPath']?>" class="card-img-top cu_img" alt="...">
+    <img src="<?php echo $row['ProductImgPath']?>" id="img_x<?php echo $x;?>" class="card-img-top cu_img" alt="...">
     <div class="card-body">
-    <span class="p_cost paytone-one-regular">₹<?php echo $row['ProductCost'];?></span>
-      <h5 class="card-title paytone-one-regular"><?php echo $row['ProductName'];?></h5>
-      <p class="card-text poppins-medium"><?php echo $row['ProductDescription'];?></p>
-      <p class="card-text poppins-medium">Farmer Name: <?php echo $row['FarmerName'];?></p>
-      <p class="card-text poppins-medium">Available Quantity:<?php echo $row['ProductQuantity']; if($row['isCount']){echo " count";}else{echo " kg";}?></p>
-      <button class="btn btn-darkgreen poppins-medium" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Now</button>
+    <span class="p_cost paytone-one-regular" id="cost_x<?php echo $x;?>" val='<?php echo $row['ProductCost'];?>'>₹<?php echo $row['ProductCost'];?></span>
+      <h5 class="card-title paytone-one-regular" id="name_x<?php echo $x;?>" val="<?php echo $row['ProductId']?>"><?php echo $row['ProductName'];?></h5>
+      <p class="card-text poppins-medium" id="des_x<?php echo $x;?>"><?php echo $row['ProductDescription'];?></p>
+      <p class="card-text poppins-medium" id="farmer_x<?php echo $x;?>">Farmer Name: <?php echo $row['FarmerName'];?></p>
+      <p class="card-text poppins-medium" id="quant_x<?php echo $x;?>" val='<?php echo $row['ProductQuantity'];?>'>Available Quantity:<?php echo $row['ProductQuantity']; if($row['isCount']){echo " count";}else{echo " kg";}?></p>
+      <button class="btn btn-darkgreen poppins-medium trig_pop" id="x<?php echo $x;?>" data-bs-toggle="modal" data-bs-target="#Popup">Buy Now</button>
     </div>
   </div>
   </div>
@@ -95,25 +105,25 @@
       <?php endif;?>
     <?php $x++;?>
   <?php endforeach;?>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="Popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="popbox modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Buy Product</h5>
+        <span class="danger pop_err_msg" id="pop_err"> </span>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="">
-        <img src="/static/img/veg.png" class="card-img-top cu_img" alt="...">
+        <img src="/static/img/veg.png" id="pop_img" class="card-img-top cu_img" alt="...">
         <div class="card-body">
-          <span class="p_cost paytone-one-regular">₹10</span>
-          <h5 class="card-title paytone-one-regular cu_de">Tomato</h5>
-          <p class="card-text  de">ProductDescription:This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text poppins-medium cu_de">Farmer Name:Ravi</p>
-          <p class="card-text poppins-medium cu_de">Available Quantity:2kg</p>
-          <label class="card-text poppins-medium cu_de">Enter Quantity:<input type="number" placeholder="Enter"></label>
-       
-        
+          <span class="p_cost paytone-one-regular" id="pop_cost">₹10</span>
+          <h5 class="card-title paytone-one-regular cu_de" id="pop_name">Tomato</h5>
+          <p class="card-text  de" id="pop_des">ProductDescription:This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text poppins-medium cu_de" id="pop_farmer">Farmer Name:Ravi</p>
+          <p class="card-text poppins-medium cu_de" id="pop_quant" val="" quant="" p_id="" user="<?php echo $user?>">Available Quantity:2kg</p>
+          <label class="card-text poppins-medium cu_de">Enter Quantity:</label><input type="number" class="form-control in_col" id="in_quant" placeholder="Enter Quantity">
+          <span class="danger" id="pop_msg"> </span>
         <!--h6> Farmer Name:Ravi</h6>
         <h6> Available Quantity:2kg</h6>
         <label>Enter Quantity:</label><input type="number" placeholder="Enter.."-->
@@ -121,8 +131,8 @@
       </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        <input type="submit" class="btn btn-darkgreen" id="btn_cart"value="Add to Cart"></input>
       </div>
     </div>
   
@@ -150,5 +160,6 @@
   </div>
 </div-->
 </div>
+<script src="/static/js/view_product.js"></script>
 </body>
 </html>

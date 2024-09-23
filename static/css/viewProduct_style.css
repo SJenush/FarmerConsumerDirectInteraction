@@ -64,3 +64,18 @@
   .de{
     margin-top: 5px;
   }
+  .in_col:focus{
+    border-color: rgb(37, 148, 31);
+    box-shadow: 0 0 0 .25rem rgba(93, 220, 20, 0.677);
+    background: transparent;
+}
+.in_col{
+    background: transparent;
+    border: 1px solid darkgreen;
+    outline: none;
+}
+.pop_err_msg{
+  padding-left: 10px;
+  color: red;
+  font-size: 15px;
+}
