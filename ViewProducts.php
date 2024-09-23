@@ -86,7 +86,7 @@
       <p class="card-text poppins-medium"><?php echo $row['ProductDescription'];?></p>
       <p class="card-text poppins-medium">Farmer Name: <?php echo $row['FarmerName'];?></p>
       <p class="card-text poppins-medium">Available Quantity:<?php echo $row['ProductQuantity']; if($row['isCount']){echo " count";}else{echo " kg";}?></p>
-      <button class="btn btn-darkgreen poppins-medium">Buy Now</button>
+      <button class="btn btn-darkgreen poppins-medium" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Now</button>
     </div>
   </div>
   </div>
@@ -95,8 +95,31 @@
       <?php endif;?>
     <?php $x++;?>
   <?php endforeach;?>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="popbox modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Carrot</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="">
+        <img src="/static/img/veg.png" class="card-img-top cu_img" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
   
-
+  </div>
+  </div>
 <!--div class="card-group">
   <div class="col-sm-6 col-md-4 col-lg-4 mb-4">
   <div class="card cu_card">
