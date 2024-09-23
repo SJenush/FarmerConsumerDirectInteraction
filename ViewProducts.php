@@ -99,16 +99,24 @@
     <div class="popbox modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Carrot</h5>
+        <h5 class="modal-title">Buy Product</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="">
         <img src="/static/img/veg.png" class="card-img-top cu_img" alt="...">
         <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          <span class="p_cost paytone-one-regular">₹10</span>
+          <h5 class="card-title paytone-one-regular cu_de">Tomato</h5>
+          <p class="card-text  de">ProductDescription:This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text poppins-medium cu_de">Farmer Name:Ravi</p>
+          <p class="card-text poppins-medium cu_de">Available Quantity:2kg</p>
+          <label class="card-text poppins-medium cu_de">Enter Quantity:<input type="number" placeholder="Enter"></label>
+       
+        
+        <!--h6> Farmer Name:Ravi</h6>
+        <h6> Available Quantity:2kg</h6>
+        <label>Enter Quantity:</label><input type="number" placeholder="Enter.."-->
         </div>
       </div>
       </div>

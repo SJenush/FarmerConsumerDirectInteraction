@@ -18,7 +18,15 @@
 }
 .f_name{
     color: darkgreen;
+   
+
 }
+.staatliches-regular {
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 .butn{
     background-color:  #006400 !important;
     float: right;
