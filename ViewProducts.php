@@ -26,35 +26,7 @@ if(isset($_SESSION['Username'])){
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary cu_nav">
-  <div class="container-fluid">
-    <div>
-      <img src="static/img/leaves.png" alt="" class="main_icon">
-    <a class="navbar-brand cu_white cu_Ti anton-regular  " href="#">GreenHarvest </a>
-  </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav c_ter">
-      <script src="https://cdn.lordicon.com/lordicon.js"></script>
-      <div class="div_ico">
-        <img src="/static/img/home.png" class="img_ico">
-        <a class="nav-link  c_top" aria-current="page" href="index.php" >Home</a>
-      </div>
-      <div class="div_ico">
-        <img src="/static/img/add-product.png" class="img_ico c_add">
-        <a class="nav-link c_top" href="AddProducts.php">Add product</a></div>
-        <div class="div_ico">
-          <img src="/static/img/search.png" class="img_ico">
-        <a class="nav-link c_top" href="ViewProducts.php">View product</a></div>
-        <div class="div_ico">
-          <img src="/static/img/logout.png" class="img_ico">
-        <a class="nav-link  c_top" href="logout.php">Logout</a></div>
-      </div>
-    </div>
-  </div>
-</nav>
+<?php include "nav_bar.php"?>
 <div class="container">
   <center>
   <div class="search_bar  col-lg-7 mb-4">
