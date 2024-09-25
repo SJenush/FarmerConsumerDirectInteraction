@@ -54,7 +54,7 @@
       <h5 class="card-title paytone-one-regular"><?php echo $row['ProductName'];?></h5>
       <p class="card-text poppins-medium">Farmer Name: <?php echo $row['FarmerName'];?></p>
       <p class="card-text poppins-medium">Available Quantity:<?php echo $row['ProductQuantity'];?></p>
-      <button class="btn btn-darkgreen poppins-medium" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Now</button>
+      
     </div>
   </div>
   </div>
