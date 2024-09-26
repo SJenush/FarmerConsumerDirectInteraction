@@ -53,7 +53,7 @@
     <span class="p_cost paytone-one-regular">₹<?php echo $row['ProductCost'];?></span>
       <h5 class="card-title paytone-one-regular"><?php echo $row['ProductName'];?></h5>
       <p class="card-text poppins-medium">Farmer Name: <?php echo $row['FarmerName'];?></p>
-      <p class="card-text poppins-medium">Available Quantity:<?php echo $row['ProductQuantity'];?></p>
+      <p class="card-text poppins-medium">Quantity:<?php echo $row['ProductQuantity'];?></p>
       
     </div>
   </div>
