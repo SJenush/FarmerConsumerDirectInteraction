@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="static/css/login_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>LOGIN-PAGE</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -57,12 +57,12 @@
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
                     <h1>Welcome Back!</h1>
-                    <p>Enter your personal detials to use all of site features</p>
+                    <p>Enter your personal detials to use all features of GreenHarvest app</p>
                     <button class="hidden" id="login">Login</button>
                 </div>
                 <div class="toggle-panel toggle-right">
-                    <h1>Hello Friends!</h1>
-                    <p>Registeration with your personal detials to use all of site features</p>
+                    <h1>New to GreenHarvest!</h1>
+                    <p>Register to GreenHarvest to add products as a farmer or buy products directly from your desired farmer as a consumer.</p>
                     <button class="hidden" id="register">Sign Up</button>
                 </div>
             </div>

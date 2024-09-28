@@ -14,18 +14,25 @@
         <img src="/static/img/home.png" class="img_ico">
         <a class="nav-link  c_top" aria-current="page" href="index.php" >Home</a>
       </div>
+      <?php if(isset($_SESSION['Role'])&&$_SESSION['Role']=='f'):?>
       <div class="div_ico">
         <img src="/static/img/add-product.png" class="img_ico c_add">
         <a class="nav-link c_top" href="AddProducts.php">Add product</a></div>
+        <?php endif;?>
         <div class="div_ico">
           <img src="/static/img/search.png" class="img_ico">
-        <a class="nav-link c_top" href="ViewProducts.php">View product</a></div>
+        <a class="nav-link c_top" href="ViewProducts.php">View products</a></div>
         <div class="div_ico">
           <img src="/static/img/cart_icon.png" class="img_ico">
         <a class="nav-link c_top" href="Cart.php">My Cart</a></div>
         <div class="div_ico">
           <img src="/static/img/logout.png" class="img_ico">
-        <a class="nav-link  c_top" href="logout.php">Logout</a></div>
+        <?php if(isset($_SESSION['Username'])):?>
+        <a class="nav-link  c_top" href="logout.php">Logout</a>
+        <?php else:?>
+          <a class="nav-link  c_top" href="login.php">Login</a>
+        <?php endif;?>
+      </div>
       </div>
     </div>
   </div>

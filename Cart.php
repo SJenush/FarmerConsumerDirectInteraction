@@ -1,3 +1,11 @@
+<?php
+ session_start();
+ if(isset($_SESSION['Username'])){
+ $user=$_SESSION['Username'];
+ }else{
+   header("Location:login.php");
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +28,6 @@
 <div class="container">
     <h2 class="topic">Cart Items:</h2>
   <?php 
-  session_start();
-  if(isset($_SESSION['Username'])){
-  $user=$_SESSION['Username'];
-  }else{
-    header("Location:login.php");
-  }
   $con=mysqli_connect("localhost","root","","dbfarmerconsumer");
   if(!$con)
   {
