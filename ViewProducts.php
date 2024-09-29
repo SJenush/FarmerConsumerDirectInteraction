@@ -31,7 +31,7 @@ if(isset($_SESSION['Username'])){
   <center>
   <div class="search_bar  col-lg-7 mb-4">
 
-    <input type="search" name="" id="" placeholder="Search..." class="form-control search_in search" >
+    <input type="search" name="" id="search_bar" placeholder="Search..." class="form-control search_in search" >
   </div>
   <div class="category col-lg-6">
     <div class="cat_ico"><img src="/static/img/apple.png" alt=""><p>Fruits</p></div>
@@ -40,6 +40,7 @@ if(isset($_SESSION['Username'])){
     <div class="cat_ico"><img src="/static/img/honey.png" alt=""><p>Sweets</p></div>
   </div>
 </center>
+<div class="row g-2">
   <?php 
   $con=mysqli_connect("localhost","root","","dbfarmerconsumer");
   if(!$con)
@@ -57,10 +58,11 @@ if(isset($_SESSION['Username'])){
   $x=0;
   foreach($result as $row):?>
     <?php if($x%4==0):?>
-      <div class="card-group">
       <?php endif;?>
-  <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-  <div class="card cu_card">
+  <div class="col-sm-6 col-md-4 col-lg-3 mb-4 product-card">
+  <div class="card cu_card" data-name="<?php echo strtolower($row['ProductName']); ?>" 
+                      data-farmer="<?php echo strtolower($row['FarmerName']); ?>" 
+                      data-description="<?php echo strtolower($row['ProductDescription']); ?>">
     <img src="<?php echo $row['ProductImgPath']?>" id="img_x<?php echo $x;?>" class="card-img-top cu_img" alt="...">
     <div class="card-body">
     <span class="p_cost paytone-one-regular" id="cost_x<?php echo $x;?>" val='<?php echo $row['ProductCost'];?>'>₹<?php echo $row['ProductCost'];?></span>
@@ -73,10 +75,11 @@ if(isset($_SESSION['Username'])){
   </div>
   </div>
   <?php if($x%4==3):?>
-    </div>
+    
       <?php endif;?>
     <?php $x++;?>
   <?php endforeach;?>
+  </div>
   <div class="modal fade" id="Popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="popbox modal-dialog modal-dialog-centered">
     <div class="modal-content">

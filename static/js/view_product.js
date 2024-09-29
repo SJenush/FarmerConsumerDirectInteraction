@@ -47,4 +47,18 @@ $(document).ready(function () {
         });
         
     });
+    $('#search_bar').on('keyup', function() {
+        var searchVal = $(this).val().toLowerCase(); 
+        $('.product-card').each(function() {
+            var card = $(this).find('.cu_card');
+            var productName = card.data('name').toLowerCase();
+            var farmerName = card.data('farmer').toLowerCase();
+            var productDescription = card.data('description').toLowerCase();
+            if (productName.includes(searchVal) || farmerName.includes(searchVal) || productDescription.includes(searchVal)) {
+                $(this).removeClass("d-none"); // Show the card
+            } else {
+                $(this).addClass("d-none"); // Hide the card
+            }
+        });
+    });
 });
