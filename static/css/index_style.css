@@ -5,7 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.cu_nav{
+    background: linear-gradient(#006400, green) !important;
+}
 /* Banner Section */
 .banner {
     background: linear-gradient(green, white) !important; /* Green background */

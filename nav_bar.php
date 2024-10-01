@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div>
       <img src="static/img/leaves.png" alt="" class="main_icon">
-    <a class="navbar-brand cu_white cu_Ti anton-regular  " href="#">GreenHarvest </a>
+    <a class="navbar-brand cu_white cu_Ti anton-regular" href="#">GreenHarvest </a>
   </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
