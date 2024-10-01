@@ -1,8 +1,7 @@
 <?php 
     session_start();
-    if (!isset($_SESSION['Username'])) {
-        header("Location: login.php");
-        exit(); // Ensure no further code is executed if not logged in
+    if (isset($_SESSION['Username'])) {
+        $user=$_SESSION['Username'];
     }
 ?>
 <!DOCTYPE html>
@@ -38,9 +37,10 @@
     <!-- Banner Section -->
     <section class="banner text-center text-white d-flex align-items-center justify-content-center" style="background-image: url('static/img/farm-background.jpg'); height: 300px;">
         <div>
-            <h1>Welcome to Farmer's Market</h1>
+            <h1 class="user_name"><?php if(isset($user)){echo "Hi ".$user.'<br>';}?></h1>
+            <h1>Welcome to GreenHarvest Site!</h1>
             <p>Buy Fresh Products Directly from Farmers!</p>
-            <a href="#" class="btn btn-warning">Shop Now</a>
+            <a href="ViewProducts.php" class="btn btn-warning">Shop Now</a>
         </div>
     </section>
     <!-- Features Section -->
@@ -97,8 +97,8 @@
     </section>
     <!-- Footer Section -->
     <footer class="text-center bg-dark text-white py-3 mt-5">
-        <p>&copy; 2024 Farmer to Consumer | All rights reserved</p>
-        <p>Contact us: <a href="mailto:info@farmermarket.com" class="text-warning">info@farmermarket.com</a></p>
+        <p>&copy; 2024 GreenHarvest | All rights reserved</p>
+        <p>Contact us: <a href="mailto:info@greenharvest.com" class="text-warning">info@greenharvest.com</a></p>
         <p>Follow us on: 
             <a href="#" class="text-warning">Facebook</a> | 
             <a href="#" class="text-warning">Instagram</a>
