@@ -41,7 +41,7 @@ $(document).ready(function () {
                     $('#pop_err').html(response['msg']);
                 }else if(response['status']==1){
                     alert("Product added to cart!");
-                    window.location.href = "cart.php";
+                    window.location.href = "Cart.php";
                 }
             },
         });
