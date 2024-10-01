@@ -24,7 +24,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
   $img_name=$_FILES['prod_img']['name'];
   $img_tmp=$_FILES['prod_img']['tmp_name'];
   $fileExtension = pathinfo($img_name, PATHINFO_EXTENSION);
-  
+  if($fileExtension!='png'&&$fileExtension!='jpg'&&$fileExtension!='jpeg'){
+    $msg="File type .".$fileExtension ." not supported";    
+  }else{
   $img_un_name='img'.uniqid().'.'. $fileExtension;
   $img_path='static/userimg/'. $img_un_name;
   //Setting connection
@@ -43,6 +45,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $msg= "Could not upload image!";
   }
 mysqli_close($con);
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -79,24 +82,24 @@ mysqli_close($con);
         <h3 class="na f_name staatliches-regular ">Add Product:</h3>
         <table>
             <tr class="rw">
-                <td>Product Name:</td><td><input type="text" class="form-control in_col" name="prod_name"></td>
+                <td>Product Name:</td><td><input type="text" class="form-control in_col" name="prod_name" required></td>
             </tr>
             <tr class="rw">
-                <td>Avaliable quantity:</td><td><input type="number"class="form-control in_col" name="prod_quantity"></td>
+                <td>Avaliable quantity:</td><td><input type="number"class="form-control in_col" name="prod_quantity" required></td>
             </tr>
             <tr class="rw">
                 <td>Quantity unit:</td><td><input type="radio"class="form-check-input in_rad" value="kg" name="unit" checked><label for="" class="form-check-label lab">in kg</label>
                 <input type="radio"class="form-check-input in_rad" value="count" name="unit"><label class="form-check-label lab">count</label></td>
             </tr>
             <tr class="rw">
-                <td>Price (per kg/count):</td><td><input type="number"class="form-control in_col" name="prod_cost"></td>
+                <td>Price (per kg/count):</td><td><input type="number"class="form-control in_col" name="prod_cost" required></td>
             </tr>
             <tr class="rw">
-                <td>Description:</td><td><textarea type="text"class="form-control in_col" name="prod_des"></textarea></td>
+                <td>Description:</td><td><textarea type="text"class="form-control in_col" name="prod_des" required></textarea></td>
             </tr>
             <tr class="rw">
                 <td>Add Image:</td>
-                <td><input type="file" class="form-control in_col" name="prod_img"></td>
+                <td><input type="file" class="form-control in_col" name="prod_img" accept=".png, .jpg, .jpeg" required></td>
                 
             </tr>
             <tr class="rw">
