@@ -1,0 +1,156 @@
+/* General Body Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner Section */
+.banner {
+    background: linear-gradient(green, white) !important; /* Green background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+.banner .btn {
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.banner .btn:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+/* Categories Section */
+.categories {
+    padding: 3rem 0;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #FFA500;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #6c757d;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel .card {
+    width: 80%;
+}
+
+/* Navbar Specifics - Retain Size */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    .categories .card {
+        margin-bottom: 2rem;
+    }
+}
+.addimg{
+    height: 500px;
+}
