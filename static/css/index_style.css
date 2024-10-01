@@ -154,3 +154,11 @@ footer a:hover {
 .addimg{
     height: 500px;
 }
+.para{
+    line-height: 40px;
+    font-size: large;
+}
+.homeing{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 10px ;
+}

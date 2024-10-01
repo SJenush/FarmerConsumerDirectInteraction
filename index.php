@@ -51,7 +51,10 @@
                 </div>
                 <div class="col-md-6 text-center text-md-start p-5">
                     <h2 class="text-success">Farmers Add Products Easily</h2>
-                    <p>Farmers can easily add their fresh produce, vegetables, and other products directly to our marketplace.</p>
+                    <p class="para">Farmers can easily register using their mobile number or email address.
+                       Each product page includes fields for important details like product name, category,quantity, price, and harvest date.
+                       Farmers can upload images of their products, showcasing the quality and freshness to potential consumers.
+                    </p>
                 </div>
             </div>
         </div>
@@ -66,7 +69,10 @@
                 </div>
                 <div class="col-md-6 text-center text-md-start p-5 order-md-1">
                     <h2 class="text-success">Consumers Buy Directly from Farmers</h2>
-                    <p>Consumers can browse and select their favorite farmers, ensuring they know exactly where their food is coming from.</p>
+                    <p class="para">Consumers can browse and select their favorite farmers, ensuring they know exactly where their food is coming from.
+                        Consumers can view the prices set directly by the farmers, ensuring fair pricing without additional markup from intermediaries.
+                        Consumers have access to a wide variety of products, from fruits and vegetables.
+                    </p>
                 </div>
             </div>
         </div>
@@ -77,11 +83,14 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="static/img/cart.png" alt="Cart and checkout" class="img-fluid w-100">
+                    <img src="static/img/cart.png" alt="Cart and checkout" class="img-fluid w-100 homeimg">
                 </div>
                 <div class="col-md-6 text-center text-md-start p-5">
                     <h2 class="text-success">Easy Cart & Checkout</h2>
-                    <p>Add your favorite products to the cart and enjoy a seamless checkout process.</p>
+                    <p class="para">Add your favorite products to the cart and enjoy a seamless checkout process.
+                    Consumers can easily add products to their cart with a single click while browsing.
+                    The cart updates in real time, reflecting changes in stock availability, price adjustments by farmers, or any modifications the consumer makes to their order.
+                    </p>
                 </div>
             </div>
         </div>
