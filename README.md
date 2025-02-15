@@ -1,4 +1,4 @@
-# 🌾 FarmerConsumerDirectInteraction
+# 🌾 Farmer-Consumer Direct Interaction
 
 A web application that enables **direct communication** between 🌱 **farmers** and 🛒 **consumers**, built using **PHP**.
 
