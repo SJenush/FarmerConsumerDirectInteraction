@@ -104,6 +104,20 @@
             <a href="#" class="text-warning">Instagram</a>
         </p>
     </footer>
-
+    <?php
+if($_SESSION['Role']=='f'){
+    echo '
+    
+    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/08/31/13/20250831135716-OCLF8VJJ.js" defer></script>
+    
+    ';
+}else{
+    echo '
+    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/08/31/15/20250831154020-B4FNB1KC.js" defer></script>
+    ';
+}
+?>
 </body>
 </html>
